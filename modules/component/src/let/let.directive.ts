@@ -164,7 +164,7 @@ export class LetDirective<U> implements OnDestroy {
       resetContextObserver: this.resetContextObserver,
       updateViewContextObserver: this.updateViewContextObserver,
     });
-    this.subscription = this.cdAware.subscribe();
+    this.subscription = (this.cdAware as any).subscribe();
   }
 
   createEmbeddedView() {
